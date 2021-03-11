@@ -41,3 +41,18 @@ class GBHHCompanyItem(scrapy.Item):
     company_description = scrapy.Field()
     company_vacancies = scrapy.Field()
 
+class Instagram(scrapy.Item):
+    _id = scrapy.Field()
+    date_parse = scrapy.Field()
+    data = scrapy.Field()
+    img = scrapy.Field()
+
+
+class InstaTag(Instagram):
+    pass
+
+
+class InstaPost(Instagram):
+    pass
+
+
