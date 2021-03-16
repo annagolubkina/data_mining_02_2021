@@ -45,7 +45,7 @@ class Instagram(scrapy.Item):
     _id = scrapy.Field()
     date_parse = scrapy.Field()
     data = scrapy.Field()
-    img = scrapy.Field()
+    image = scrapy.Field()
 
 
 class InstaTag(Instagram):
@@ -55,4 +55,7 @@ class InstaTag(Instagram):
 class InstaPost(Instagram):
     pass
 
+
+class InstaUser(Instagram):
+    pass
 

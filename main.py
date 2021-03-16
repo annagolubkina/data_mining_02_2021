@@ -10,7 +10,8 @@ from gb_parse.spiders.instagram import InstagramSpider
 
 if __name__ == "__main__":
     dotenv.load_dotenv('.env')
-    tags = ['python','java', 'programm']
+    # tags = ['python','java', 'programm']
+    user_list = ['katrinbuka', 'merilipsman','brezhneva_alena']
     crawler_settings = Settings()
     crawler_settings.setmodule("gb_parse.settings")
     crawler_proc = CrawlerProcess(settings=crawler_settings)
@@ -19,5 +20,7 @@ if __name__ == "__main__":
     crawler_proc.crawl(InstagramSpider,
                        login=os.getenv('INST_LOGIN'),
                        password=os.getenv('INST_PASSWORD'),
-                       tags=tags)
+                       # tags=tags
+                       start_users=user_list
+                       )
     crawler_proc.start()
